@@ -55,12 +55,12 @@ public class UniversityApplication
         // Print professors for each student
         System.out.println("Professors of Reza Mohammadi:");
         for (Course course : reza.getCourses()) {
-            System.out.println(course.getProfessor().getName());
+            System.out.println(course.getProfessor());
         }
 
         System.out.println("Professors of Nilufar Hajipour:");
         for (Course course : nilufar.getCourses()) {
-            System.out.println(course.getProfessor().getName());
+            System.out.println(course.getProfessor());
         }
     }
 }

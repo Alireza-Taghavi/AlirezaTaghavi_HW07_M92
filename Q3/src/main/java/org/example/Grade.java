@@ -17,4 +17,12 @@ public class Grade {
     public int getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return "Grade{" +
+                "student=" + student.getName() +
+                ", value=" + value +
+                '}';
+    }
 }

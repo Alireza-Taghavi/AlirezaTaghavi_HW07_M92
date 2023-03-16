@@ -21,7 +21,6 @@ public class Course {
 
     public void setProfessor(Professor professor) {
         this.professor = professor;
-        professor.teach(this);
     }
 
     public void grade(Student student, int value) {
@@ -38,5 +37,13 @@ public class Course {
 
     public Professor getProfessor() {
         return professor;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "name='" + name + '\'' +
+                ", grades=" + grades.toString() +
+                '}';
     }
 }

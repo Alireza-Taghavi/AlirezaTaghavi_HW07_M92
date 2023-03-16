@@ -6,12 +6,10 @@ import java.util.List;
 public class Professor {
     private String name;
     private List<Course> courses;
-    private List<Student> students;
 
     public Professor(String name) {
         this.name = name;
         this.courses = new ArrayList<>();
-        this.students = new ArrayList<>();
     }
 
     public void teach(Course course) {
@@ -19,11 +17,11 @@ public class Professor {
         course.setProfessor(this);
     }
 
-    public void addStudent(Student student) {
-        students.add(student);
-    }
-
     public List<Student> getStudents() {
+        List<Student> students = new ArrayList<>();
+        for (Course course : courses) {
+            students.addAll(course.getStudents());
+        }
         return students;
     }
 
@@ -31,12 +29,25 @@ public class Professor {
         return courses;
     }
 
+    public String getStudentsList() {
+        StringBuilder students = new StringBuilder();
+
+        students.append("[");
+        for (Course course : courses) {
+            for (Student student : course.getStudents()) {
+                students.append(student.getName()).append(", ");
+            }
+        }
+        students.append("]");
+        return String.valueOf(students);
+    }
+
     @Override
     public String toString() {
         return "Professor{" +
                 "name='" + name + '\'' +
                 ", courses=" + courses.toString() +
-                ", students=" + students.toString() +
+                ", students=" + this.getStudentsList() +
                 '}';
     }
 }

@@ -26,6 +26,10 @@ public class Student {
         return courses;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
