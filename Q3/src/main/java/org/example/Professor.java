@@ -30,4 +30,13 @@ public class Professor {
     public List<Course> getCourses() {
         return courses;
     }
+
+    @Override
+    public String toString() {
+        return "Professor{" +
+                "name='" + name + '\'' +
+                ", courses=" + courses.toString() +
+                ", students=" + students.toString() +
+                '}';
+    }
 }
