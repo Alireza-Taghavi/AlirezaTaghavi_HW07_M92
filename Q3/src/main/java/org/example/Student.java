@@ -25,5 +25,14 @@ public class Student {
     public List<Course> getCourses() {
         return courses;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", major='" + major + '\'' +
+                ", semester=" + semester +
+                '}';
+    }
 }
 
