@@ -13,7 +13,6 @@ public class Professor {
     }
 
     public void teach(Course course) {
-        courses.add(course);
         course.setProfessor(this);
     }
 

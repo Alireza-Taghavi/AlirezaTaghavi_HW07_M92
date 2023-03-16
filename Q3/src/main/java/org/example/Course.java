@@ -21,6 +21,8 @@ public class Course {
 
     public void setProfessor(Professor professor) {
         this.professor = professor;
+//        professor.teach(this);
+        professor.getCourses().add(this);
     }
 
     public void grade(Student student, int value) {
